@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Picture Wall</title>
+    {% load static %}
+    <style media="screen">
+      body{
+        background-image: url("{% static 'wall/images/background.jpg' %}");
+      }
+      *{
+        box-sizing: border-box;
+      }
+      .your_button{
+        margin-left: auto;
+      }
+      main{
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        margin: 20px;
+      }
+      img{
+        display: inline-block;
+        width: 100%;
+        box-shadow: -1px 0px 0px rgba(0,0,0,0,0.6);
+      }
+
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Welcome {{ user.first_name}} to Picture Wall</a>
+      <form class="your_button" action="/login" method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-info">{{ user.first_name}}'s wall</button>
+      </form>
+    </nav>
+    <main class="main" role="main">
+      <img src="{% static 'wall/images/0.jpg' %}" alt="photo">
+      <img src="{% static 'wall/images/2.jpg' %}" alt="photo">
+      <img src="{% static 'wall/images/3.jpg' %}" alt="photo">
+      <img src="{% static 'wall/images/4.jpg' %}" alt="photo">
+      <img src="{% static 'wall/images/5.jpg' %}" alt="photo">
+      <img src="{% static 'wall/images/6.jpg' %}" alt="photo">
+      <img src="{% static 'wall/images/7.jpg' %}" alt="photo">
+      <img src="{% static 'wall/images/8.jpg' %}" alt="photo">
+      <img src="{% static 'wall/images/9.jpg' %}" alt="photo">
+      <img src="{% static 'wall/images/10.jpg' %}" alt="photo">
+      <img src="{% static 'wall/images/11.jpg' %}" alt="photo">
+      <img src="{% static 'wall/images/12.jpg' %}" alt="photo">
+      <img src="{% static 'wall/images/13.jpg' %}" alt="photo">
+      <img src="{% static 'wall/images/14.jpg' %}" alt="photo">
+      <img src="{% static 'wall/images/15.jpg' %}" alt="photo">
+      <img src="{% static 'wall/images/16.jpg' %}" alt="photo">
+      <img src="{% static 'wall/images/17.jpg' %}" alt="photo">
+      <img src="{% static 'wall/images/18.jpg' %}" alt="photo">
+      <img src="{% static 'wall/images/19.jpg' %}" alt="photo">
+      <img src="{% static 'wall/images/20.jpg' %}" alt="photo">
+      <img src="{% static 'wall/images/21.jpg' %}" alt="photo">
+      <img src="{% static 'wall/images/22.jpg' %}" alt="photo">
+      <img src="{% static 'wall/images/23.jpg' %}" alt="photo">
+      <img src="{% static 'wall/images/24.jpg' %}" alt="photo">
+      <img src="{% static 'wall/images/25.jpg' %}" alt="photo">
+      <img src="{% static 'wall/images/27.jpg' %}" alt="photo">
+      <img src="{% static 'wall/images/28.jpg' %}" alt="photo">
+      <img src="{% static 'wall/images/29.jpg' %}" alt="photo">
+      <img src="{% static 'wall/images/30.jpg' %}" alt="photo">
+      <img src="{% static 'wall/images/31.jpg' %}" alt="photo">
+      <img src="{% static 'wall/images/32.jpg' %}" alt="photo">
+      <img src="{% static 'wall/images/33.jpg' %}" alt="photo">
+      <img src="{% static 'wall/images/34.jpg' %}" alt="photo">
+    </main>
+  </body>
+</html>
